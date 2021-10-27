@@ -5,11 +5,11 @@ use near_sdk::{env, near_bindgen};
 #[derive(Default, BorshDeserialize, BorshSerialize)]
 pub struct Contract {
     value: u64,
+    //value: String,
 }
 
 #[near_bindgen]
 impl Contract {
-    // ADD CONTRACT METHODS HERE
     pub fn hello(&self) -> &str {
         return "Hello world";
     }
