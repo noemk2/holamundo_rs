@@ -1,15 +1,12 @@
 #!/bin/bash
 set -e
 
-if [[ -d ./res ]]
-then
-    #echo "/etc exists on your filesystem."
-	RUSTFLAGS='-C link-arg=-s' cargo build --target wasm32-unknown-unknown --release
-	cp target/wasm32-unknown-unknown/release/*.wasm ./res/
-	near dev-deploy --wasm_file ./res/*.wasm
-else
-	mkdir ./res
-	RUSTFLAGS='-C link-arg=-s' cargo build --target wasm32-unknown-unknown --release
-	cp target/wasm32-unknown-unknown/release/*.wasm ./res/
-	near dev-deploy --wasm_file ./res/*.wasm
+
+RUSTFLAGS='-C link-arg=-s' cargo build --target wasm32-unknown-unknown --release
+
+if [ ! -d ./res ]; then
+    mkdir ./res
 fi
+
+cp target/wasm32-unknown-unknown/release/*.wasm ./res/
+near dev-deploy --wasm_file ./res/*.wasm
