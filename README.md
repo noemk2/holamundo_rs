@@ -17,7 +17,7 @@ Para correr este proyecto en local debes seguir los siguientes pasos:
 
 Paso 1: Pre - Requisitos
 ------------------------------
-1. Asegúrese de tener todos los [prequisitos para compilar en rust] 
+1. Asegúrese de tener todos los [prequisitos para compilar en rust] (Install Rustup , Add wasm target to your toolchain)
 3. Crear un test near account [NEAR test account]
 4. Instalar el NEAR CLI globally: [near-cli] es una interfaz de linea de comando (CLI) para interacturar con NEAR blockchain
 
