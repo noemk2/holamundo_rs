@@ -17,7 +17,7 @@ Para correr este proyecto en local debes seguir los siguientes pasos:
 
 Paso 1: Pre - Requisitos
 ------------------------------
-1. Asegúrese de tener todos los [prequisitos]
+1. Asegúrese de tener todos los [prequisitos de rust] 
 3. Crear un test near account [NEAR test account]
 4. Instalar el NEAR CLI globally: [near-cli] es una interfaz de linea de comando (CLI) para interacturar con NEAR blockchain
 
@@ -100,7 +100,7 @@ Las pruebas son parte del desarrollo, luego, para ejecutar las pruebas en el con
 ==============================================
 
   [create-near-app]: https://github.com/near/create-near-app
-  [prequisitos]: https://github.com/near/near-sdk-rs#pre-requisites
+  [prequisitos de rust]: https://github.com/near/near-sdk-rs#pre-requisites
   [NEAR accounts]: https://docs.near.org/docs/concepts/account
   [NEAR Wallet]: https://wallet.testnet.near.org/
   [near-cli]: https://github.com/near/near-cli
