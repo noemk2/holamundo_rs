@@ -18,9 +18,8 @@ Para correr este proyecto en local debes seguir los siguientes pasos:
 Paso 1: Pre - Requisitos
 ------------------------------
 1. Asegúrese de tener todos los [prequisitos]
-3. Instalar dependencias: `cargo check`
-4. Crear un test near account [NEAR test account]
-5. Instalar el NEAR CLI globally: [near-cli] es una interfaz de linea de comando (CLI) para interacturar con NEAR blockchain
+3. Crear un test near account [NEAR test account]
+4. Instalar el NEAR CLI globally: [near-cli] es una interfaz de linea de comando (CLI) para interacturar con NEAR blockchain
 
     yarn install --global near-cli
 
@@ -37,26 +36,26 @@ Step 3: Clonar Repositorio
 Este comando nos permite clonar el repositorio de nuestro proyecto 
 
 ```bash
-git clone https://github.com/noemk2/holamundo_as.git
+git clone https://github.com/noemk2/holamundo_rs.git
 ```
 
 Una vez que hayas descargado el repositorio, asegurate de ejecutar los comandos dentro del repositorio descargado. Puedes hacerlo con
 ```bash
-cd holamundo_as/
+cd holamundo_rs/
 ```
 
 Step 4: Realiza el BUILD para implementación de desarrollo de contrato inteligente 
 ------------------------------------------------------------------------------------
 
-Instale el gestor de dependencia de Node.js dentro del repositorio
+Instalar dependencias 
 
 ```bash
-npm install
+cargo check
 ```
 
 Cree el código de contrato inteligente e implemente el servidor de desarrollo local: 
 ```bash
-yarn deploy:dev
+sh build.sh
 ```
 
 Cree la variable local $CONTRACT_NAME (permite guardar tu contrato temporal en una variable facil de recordar)
@@ -64,14 +63,7 @@ Cree la variable local $CONTRACT_NAME (permite guardar tu contrato temporal en u
 source ./neardev/dev-account.env
 ```
 
-Consulte` package.json` para obtener una lista completa de `scripts` que puede ejecutar con` yarn`). Este script le devuelve un contrato inteligente provisional
-implementado (guárdelo para
-usarlo más tarde)
-
-
 ¡Felicitaciones, ahora tendrá un entorno de desarrollo local ejecutándose en NEAR TestNet!
-
-
 
 
 ✏️ Comando  view : request estatico
@@ -87,7 +79,7 @@ near view $CONTRACT_NAME hello_world --account-id <username>.testnet
 ✏️ Comando  call : request dinamico
 --------------------------------------------
 
-Permite imprimir "Hello " + <username>.testnet  
+Permite imprimir "Hello " + <username> .testnet  
 
 Para Linux :
 ```bash
@@ -100,7 +92,9 @@ near call $CONTRACT_NAME hello --account-id <username>.testnet
 
 Las pruebas son parte del desarrollo, luego, para ejecutar las pruebas en el contrato inteligente , debe ejecutar el siguiente comando:
 
-    yarn test
+```bash
+ cargo test -- --nocapture  
+```
 
 
 ==============================================
@@ -111,6 +105,3 @@ Las pruebas son parte del desarrollo, luego, para ejecutar las pruebas en el con
   [NEAR Wallet]: https://wallet.testnet.near.org/
   [near-cli]: https://github.com/near/near-cli
   [NEAR test account]: https://docs.near.org/docs/develop/basics/create-account#creating-a-testnet-account
-  [nvm]: https://github.com/nvm-sh/nvm
-  [UX/UI]: https://www.figma.com/proto/GqP5EF5zRZRvAv3HoaSsuN/uniwap?node-id=39%3A2300&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=39%3A2300&hide-ui=1
-  [UX/UI]: https://www.figma.com/proto/0dZLC0WI1eVsfjeKu3T8J8/Garant%C3%ADzame?node-id=2%3A8&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=2%3A8
