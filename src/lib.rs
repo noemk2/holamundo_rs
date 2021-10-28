@@ -4,8 +4,8 @@ use near_sdk::{env, near_bindgen};
 #[near_bindgen]
 #[derive(Default, BorshDeserialize, BorshSerialize)]
 pub struct Contract {
-    value: u64,
-    //value: String,
+    //value: u64,
+    value: String,
 }
 
 #[near_bindgen]
